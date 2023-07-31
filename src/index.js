@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import WebFont from "webfontloader";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,6 +11,17 @@ root.render(
     <App />
   </React.StrictMode>
 );
+WebFont.load({
+  google: {
+      families: ["Yeseva One:400","Work Sans:400,500,700,600","Poppins"]
+  }
+});
+const tw = document.createElement("script");
+tw.setAttribute("src", "https://cdn.tailwindcss.com");
+tw.setAttribute("type", "text/javascript");
+document.body.appendChild(tw);
+document.body.style.backgroundColor = '#e5e5e5';
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
